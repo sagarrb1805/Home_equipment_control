@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
+from .models import Switches
 from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
@@ -23,6 +24,9 @@ def signup(request):
         myuser.first_name = fname
         myuser.last_name = lname
         myuser.save()
+
+        s = Switches(username=username)
+        s.save()
 
         messages.success(request, 'Your account has been successfuly created')
         return redirect('signin')
