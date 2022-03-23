@@ -8,5 +8,30 @@
 </head>
 <body>
     <h2>signin</h2>
+    {% for message in messages %}
+    <div class="container-fluid p-0">
+        <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        {{ message }}
+        </div>
+    </div>
+    {% endfor %}
+
+    <form class=""  method="post">
+        {% csrf_token %}
+        <label for="">Username</label>
+        <input type="text" id="username" name="username" placeholder="username" required>
+        <br>
+  
+        <label for="">Password</label>
+        <input type="password" id="pass1" name="pass1" placeholder="password" required>
+        <br>
+  
+        <button type="sybmit" name="signin">Sign In</button>
+  
+      </form>
+
 </body>
 </html>
