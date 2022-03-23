@@ -55,7 +55,11 @@ def signin(request):
             # current_user = request.user
             # name = current_user.username
             name = user.username
-            return render(request, 'controlapp/index.html', {'name': name})
+
+            status = Switches.objects.get(username=name)
+
+
+            return render(request, 'controlapp/index.html', {'name': name, 'status':status})
         else:
             messages.error(request, 'Bad credentials')
             return redirect('home')

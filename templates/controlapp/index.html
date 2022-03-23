@@ -23,6 +23,45 @@
     {% if user.is_authenticated %}
       <h2>Hello {{ name }}</h2>
       <h3>you are succesfuly logged in</h3>
+        <ul>
+            <li>
+                <h3>switch 1: {{ status.switch_1 }}</h3>
+                <form method="POST">{% csrf_token %}
+                    <button type="submit" name="sw1">Change</button>
+                </form>
+            </li>
+
+            <li>
+                <h3>switch 2: {{ status.switch_2 }}</h3>
+                <form method="POST">{% csrf_token %}
+                    <button type="submit" name="sw2">Change</button>
+                </form>
+            </li>
+
+            <li>
+                <h3>switch 3: {{ status.switch_3 }}</h3>
+                <form method="POST">{% csrf_token %}
+                    <button type="submit" name="sw3">Change</button>
+                </form>
+            </li>
+
+            <li>
+                <h3>switch 4: {{ status.switch_4 }}</h3>
+                <form method="POST">{% csrf_token %}
+                    <button type="submit" name="sw4">Change</button>
+                </form>
+            </li>
+
+            <li>
+                <h3>switch 5: {{ status.switch_5 }}</h3>
+                <form method="POST">{% csrf_token %}
+                    <button type="submit" name="sw5">Change</button>
+                </form>
+            </li>
+        </ul>
+        
+
+
       <button type="submit" name="signout"><a href="signout">Signout</a></button>
     {% else %}
 
