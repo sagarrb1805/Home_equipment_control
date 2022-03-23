@@ -25,10 +25,11 @@ def signup(request):
         
         if User.objects.filter(email=email):
             messages.error(request, "An account with this email exits")
-            return redirect(signin)
+            return redirect('signin')
 
         if pass1 != pass2:
-            messages.error("password doesn't match")
+            messages.error(request, "password doesn't match")
+            return redirect('signup')
 
         myuser = User.objects.create_user(username, email, pass1)
         myuser.first_name = fname
@@ -51,6 +52,8 @@ def signin(request):
 
         if user is not None:
             login(request, user)
+            # current_user = request.user
+            # name = current_user.username
             name = user.username
             return render(request, 'controlapp/index.html', {'name': name})
         else:
