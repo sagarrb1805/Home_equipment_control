@@ -7,8 +7,6 @@ from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 def home(request):
-    # if request.method == 'POST' and 'signout' in request.POST:
-    #     signout(request)
     return render(request, 'controlapp/index.html')
 
 
@@ -61,10 +59,10 @@ def signin(request):
     return render(request, 'controlapp/signin.html')
 
 
-# def signout(request):
-#     logout(request)
-#     messages.success(request, 'logged out')
-#     # return redirect('home')
+def signout(request):
+    logout(request)
+    messages.success(request, 'logged out')
+    return redirect('home')
 
 
 
