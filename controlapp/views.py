@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -44,7 +43,7 @@ def signup(request):
     return render(request, 'controlapp/signup.html')
 
 def signin(request):
-    if request.method == 'POST':
+    if request.method == 'POST' and 'signin' in request.POST:
         username = request.POST['username']
         pass1 = request.POST['pass1']
 
@@ -57,12 +56,36 @@ def signin(request):
             name = user.username
 
             status = Switches.objects.get(username=name)
-
-
+                
             return render(request, 'controlapp/index.html', {'name': name, 'status':status})
         else:
             messages.error(request, 'Bad credentials')
             return redirect('home')
+    if request.user.is_authenticated:
+        current_user = request.user
+        name = current_user.username
+        status = Switches.objects.get(username=name)
+
+        if request.method == 'POST' and 'sw1' in request.POST:
+            status.switch_1 = not status.switch_1
+            status.save()
+        if request.method == 'POST' and 'sw2' in request.POST:
+            status.switch_2 = not status.switch_2
+            status.save()
+        if request.method == 'POST' and 'sw3' in request.POST:
+            status.switch_3 = not status.switch_3
+            status.save()
+        if request.method == 'POST' and 'sw4' in request.POST:
+            status.switch_4 = not status.switch_4
+            status.save()
+        if request.method == 'POST' and 'sw5' in request.POST:
+            status.switch_5 = not status.switch_5
+            status.save()
+            
+        return render(request, 'controlapp/index.html', {'name': name, 'status':status})
+
+
+
     return render(request, 'controlapp/signin.html')
 
 
