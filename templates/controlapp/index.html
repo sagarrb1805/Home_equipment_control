@@ -29,7 +29,7 @@
             <li>
                 <h3>switch 1: {{ status.switch_1 }}</h3>
                 <form method="POST">{% csrf_token %}
-                    <button type="submit" name="sw1">Change</button>
+                    <button type="submit" name="sw1">Toggle</button>
                 </form>
             </li>
 
@@ -62,7 +62,6 @@
             </li>
         </ul>
         
-
 
       <button type="submit" name="signout"><a href="signout">Signout</a></button>
     {% else %}

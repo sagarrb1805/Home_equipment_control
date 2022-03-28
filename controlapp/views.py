@@ -94,7 +94,6 @@ def signout(request):
     messages.success(request, 'logged out')
     return redirect('home')
 
-
-
-
+def returnhome(request):
+    return redirect('home')
 
