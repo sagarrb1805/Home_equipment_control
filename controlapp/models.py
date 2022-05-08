@@ -7,4 +7,5 @@ class Switches(models.Model):
     switch_3 = models.BooleanField(default=False)
     switch_4 = models.BooleanField(default=False)
     switch_5 = models.BooleanField(default=False)
+    switch_6 = models.BooleanField(default=False)
 

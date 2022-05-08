@@ -1,3 +1,416 @@
-h1{
-    color: brown;
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+}
+
+
+.container{
+    height:100vh;
+    width:100%;
+    background:white;
+    padding-left: 5px;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: absolute;
+    
+    
+
+}
+.navbar{
+  width:100%;
+  height: 7vh;
+  display: flex;
+  background-color:white;
+  align-items:center;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: 1;
+  box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25);
+  border-radius: 0%;
+
+    
+    
+    
+
+}
+
+.picture{
+    position:absolute;
+    width:40%;
+    height:100vh;
+    right: 20px;
+    top:10%;
+    float:right;
+    background:url("imagesofsite/3685379.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+
+}
+.content{
+    position:relative;
+    margin-top: 15%;
+    margin-left:20px;
+    width:50%;
+    height:100vh;
+    padding-left:20px;
+    
+}
+.content h1{
+    font-size: 73px;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color:rgb(0, 0, 0);
+    animation-name:fadeInDown ;
+    animation-duration: 3s;
+    
+   
+
+}
+
+.content p{
+    font-size: 20px;
+    word-spacing: 3px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight:900;
+    color:rgb(43, 42, 42);
+    
+    
+}
+
+nav{
+  flex:1;
+  text-align: right;
+}
+
+
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin: 0px 20px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color:rgb(238, 67, 67);
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+   
+    
+
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color:rgb(0, 0, 146);
+}
+@keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ } 
+.login-btn{
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color:white;
+    background-color:rgb(238, 52, 52);
+    border: 2px solid white;
+    outline: 2px solid rgb(238, 52, 52);
+    transition-duration: 0.4s;
+  }
+  .login-btn a{
+      text-decoration: none;
+      color:white;
+  }
+ .login-btn:hover{
+   background-color: rgb(221, 10, 10);;
+ }
+ .welcome{
+   position: absolute;
+   top:50px;
+   left: 15px;
+   width:100%;
+   height:15vh;
+   text-align:center;
+   
+ }
+ .name{
+   font-family:'Poppins', sans-serif;
+   text-transform: capitalize;
+ }
+ .switches{
+   position:relative;
+   width: 55%;
+   height:80vh;
+   
+   
+ }
+ .switches ul{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+
+ 
+
+ .material-symbols-outlined {
+
+   font-variation-settings:
+   'FILL' 1,
+   'wght' 700,
+   'GRAD' 200,
+   'opsz' 48
+ }
+ 
+ .vector{
+  position:absolute;
+  left: 750px;
+  top:120px;
+  width: 40%;
+  height:80vh;
+  background-image: url("imagesofsite/Home-Automation.jpg");
+  background-repeat: no-repeat;
+
+ }
+ .one{
+   position: absolute;
+   top:50px;
+   left:40px;
+   width:25%;
+   height:20vh;
+   
+ }
+.two{
+  position: absolute;
+   top:50px;
+   left:270px;
+   width:25%;
+   height:20vh;
+   
+ }
+.three{
+  position: absolute;
+   top:50px;
+   left:500px;
+   width:25%;
+   height:20vh;
+   
+
+}
+.four{
+  position: absolute;
+  top:200px;
+  left:40px;
+  width:25%;
+  height:20vh;
+  
+
+}
+.five{
+  position: absolute;
+  top:200px;
+  left:270px;
+  width:25%;
+  height:20vh;
+  
+
+}
+.six{
+  position: absolute;
+  top:200px;
+  left:500px;
+  width:25%;
+  height:20vh;
+  
+
+}
+a{
+  color:white;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.navbar2{
+  width:100%;
+  height: 15vh;
+  float: right;
+  color:white;
+  text-align: right;
+  position: fixed;
+  
+  
+
+}
+
+.name{
+  color: hwb(243 11% 7%);
+}
+
+.smart_switches{
+  position: relative;
+  background-color: black;
+  width: 100%;
+  height:100vh;
+
+}
+.tag1{
+  position:absolute;
+  width:100%;
+  height:100vh;
+  padding-left: 30px;
+  padding-top: 150px;
+  padding-bottom: 200px;
+  background-image:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)) ,url("imagesofsite/r-architecture-T6d96Qrb5MY-unsplash.jpg")  ;
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  left:0;
+  right:0;
+  align-items: center;
+  
+  
+
+
+}
+.tag1 h1{
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  
+  color: white;
+}
+.tag1 h2{
+  font-size: 30px;
+  color: #ffffff;
+}
+.tag1 p{
+  font-family:'Roboto', sans-serif;
+  color:#ffffff;
+  padding-right: 30px;
+  line-height: 1.3em;
+  margin-bottom: 32px;
+  font-size: 27px;
+  word-spacing: 2px;
+
+}
+.tag2{
+  position:absolute;
+  width:100%;
+  height:100vh;
+  padding-left: 30px;
+  padding-right: 70px;
+  top:100%;
+  background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)) ,url("imagesofsite/iot-6896268\ \(1\).jpg")  ;
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  left:0;
+  right:0;
+  align-items: center;
+  text-align: right;
+
+}
+.hed{
+  width:100%;
+  height:50%;
+  position: absolute;
+  top:100px;
+  color: white;
+  left:0px;
+  right:0px;
+  
+  
+}
+.hed h2{
+  font-size: 40px;
+  font-family:'Poppins', sans-serif;
+  padding-right:70px;
+  padding-left: 100px;
+}
+.hed p{
+  position: absolute;
+  top:130px;
+  font-size: 25px;
+  padding-left: 620px;
+  padding-right:70px;
+  font-family:'Roboto', sans-serif;
+}
+
+.footer-content{
+  position: absolute;
+  top:100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  height: 200px;
+  width: 100vw;
+  padding-top: 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content p{
+  max-width: 560px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  color: #cacdd2;
+}
+.footer-bottom{
+  position:relative;
+  background: #000;
+  width: 100vw;
+  height:50px;
+  padding-bottom: 40px;
+  text-align: center;
+  align-items: center;
+}
+.footer-bottom p{
+  font-size: 15px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.footer-bottom p a{
+ color:#44bae8;
+ font-size: 16px;
+ text-decoration: none;
+}
+.footer-bottom span{
+   text-transform: uppercase;
+   opacity: .4;
+   font-weight: 200;
+}
+.logo{
+  text-align: center;
+  padding-bottom: 18px;
+  padding-left: 20px;
+}
+.logo h2{
+  font-family:'Lobster', cursive;
+  color:rgb(36, 221, 113);
+  font-size: 30px;
+  font-family: 'Vidaloka', serif;
+
 }

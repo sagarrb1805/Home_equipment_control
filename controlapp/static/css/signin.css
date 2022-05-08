@@ -1,3 +1,186 @@
-h2{
-    color: blueviolet;
+
+
+.container{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+   
+
+}
+.left{
+    left:0;
+    background-image: url("imagesofsite/large-triangles\ \(1\).svg");
+
+}
+.right{
+    right:0;
+    background-image: url("imagesofsite/large-triangles\ \(1\).svg");
+    
+
+}
+.login{
+    
+
+   
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    top: 80px;
+    box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25);
+   
+
+}
+.left2{
+    left: 50px;
+    float:left;
+    background: #ffffff;
+    border-radius: 60px 0px 0px 60px;
+    top: 35px;
+}
+
+.right2{
+    right: 50px;;
+    background: #D6E4F0;
+    border-radius: 0px 60px 60px 0px;
+    top: 35px;
+}
+.vectorimg{
+    position: absolute;
+    width: 509px;
+    height: 522px;
+    left:795px;
+    top: 287px;
+
+}
+#welcome{
+    
+
+    position: absolute;
+    color:#f50057;
+    width: 250px;
+    height: 38px;
+    left: 230px;
+    top: 20px;
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+
+
+}
+.account{
+    position: absolute;
+    width:90px;
+    height: 90px;
+    left: 280px;
+    top:100px;
+}
+
+
+.input-field {
+
+    
+
+    background-color: white;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    border: 1px solid #544bf8;
+    padding-left: 40px;
+    border-radius: 7px;
+  }
+
+  input:focus {
+    border: 2px solid #f5397b;
+  }
+  input.user{
+    
+    position: absolute;
+    width: 350px;
+    height: 45px;
+    left: 150px;
+    top: 220px;
+    
+
+    }
+    input.password{
+        position: absolute;
+        width: 350px;
+        height: 45px;
+        left: 150px;
+        top: 300px;
+
+
+
+  }
+  .login-btn{
+      
+
+    position: absolute;
+    font-family:sans-serif;
+    color:white;
+    width: 150px;
+    height: 45px;
+    left: 150px;
+    top: 380px;
+    background: #6C63FF;
+    border-radius: 10px;
+    border:none;
+    cursor:pointer;
+
+  }
+  .login-btn:hover{
+      background:#251bec;
+  }
+  .vector{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 130px;
+    top:30px;
+}
+#user{
+    position:absolute;
+    top: 200px;
+    left:150px;
+    color:#251bec;
+}
+#pwsd{
+    position:absolute;
+    top:280px;
+    left:150px;
+    color:#251bec;
+}
+#account-signup{
+    position: absolute;
+    top:430px;
+    left:150px;
+
+}
+#signup-link{
+    position: absolute;
+    top:435px;
+    left:300px;
+
+
+}
+a{
+    text-decoration: none;
+    color:#f50057;
+    font-size: 15px;
+}
+a:hover{
+    color:#251bec;
+    
 }

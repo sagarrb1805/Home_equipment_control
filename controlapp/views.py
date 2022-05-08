@@ -60,7 +60,7 @@ def signin(request):
             return render(request, 'controlapp/index.html', {'name': name, 'status':status})
         else:
             messages.error(request, 'Bad credentials')
-            return redirect('home')
+            return redirect('signin')
     if request.user.is_authenticated:
         current_user = request.user
         name = current_user.username
@@ -81,6 +81,10 @@ def signin(request):
         if request.method == 'POST' and 'sw5' in request.POST:
             status.switch_5 = not status.switch_5
             status.save()
+
+        if request.method == 'POST' and 'sw6' in request.POST:
+            status.switch_6 = not status.switch_6
+            status.save()
             
         return render(request, 'controlapp/index.html', {'name': name, 'status':status})
 
@@ -96,4 +100,7 @@ def signout(request):
 
 def returnhome(request):
     return redirect('home')
+
+def signupredirect(request):
+    return redirect('signup')
 
